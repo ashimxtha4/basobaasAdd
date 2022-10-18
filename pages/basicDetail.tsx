@@ -13,7 +13,7 @@ import RectangleRadio from '../components/ui components/radio/rectangleRadio'
 import SquareRadio from '../components/ui components/radio/squareRadio'
 import { boolean } from 'yup/lib/locale'
 
-const basicDetail:NextPage =(e)=> {
+const BasicDetail:NextPage =(e)=> {
 const [aCategory,setCategory]=useState(
   [{key:"adCategory",value:""},
   {key:"propertyType",value:""},
@@ -122,8 +122,8 @@ const buttonClick=(e:Event)=>{
                       
                       <div className={style.propertyTypeDivRow}>
                         <RectangleRadio icon={<BiHome/>} value="Residential" />
-                        <RectangleRadio icon={<Image src={commercial} />} value="Commercial" />
-                        <RectangleRadio icon={<Image src={agriculture} />} value="Agriculture" />
+                        <RectangleRadio icon={<Image src={commercial} alt="image" />} value="Commercial" />
+                        <RectangleRadio icon={<Image src={agriculture} alt="image" />} value="Agriculture" />
                         <span id='propertyTypeError'></span>
                       </div>
                       
@@ -162,4 +162,4 @@ const buttonClick=(e:Event)=>{
   )
 }
 
-export default basicDetail
+export default BasicDetail

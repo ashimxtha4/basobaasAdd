@@ -22,7 +22,7 @@ const AdDetails: NextPage = () => {
       {/* <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css" ></link> */}
       <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet"></link>
       <style>
-        @import url('http://fonts.cdnfonts.com/css/product-sans');
+        {/* @import url('http://fonts.cdnfonts.com/css/product-sans'); */}
       </style>
       </Head>
     <div className={style.containerDiv}>

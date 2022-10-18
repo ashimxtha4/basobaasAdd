@@ -38,7 +38,7 @@ const propertyDetails: NextPage = () => {
                 {/* <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css" ></link> */}
                 <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet"></link>
                 <style>
-                    @import url('http://fonts.cdnfonts.com/css/product-sans');
+                    {/* @import url('http://fonts.cdnfonts.com/css/product-sans'); */}
                 </style>
             </Head>
             <div className={styles.containerDiv}>
@@ -292,7 +292,7 @@ const propertyDetails: NextPage = () => {
                      <label className={style.label} htmlFor=""> Ameneties  <HiOutlineInformationCircle /></label>
                     <div className={style.aminities_button}>
                         {/* <AminitiesCheckbox value="Aminities" /> */}
-                        {amenities.map((value)=><AmenitiesCheckbox value={value} />)}
+                        {amenities.map((value,key)=><AmenitiesCheckbox value={value} />)}
                     </div>
                     <span id="amenitiesError"></span>
                 </div>

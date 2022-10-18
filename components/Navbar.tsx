@@ -22,10 +22,10 @@ const Navbar:NextPage=()=> {
           <div className={style.linkDiv}>
             {
               links.map((data)=>
-              <a className={style.links}>{data}</a>
+              <a href="" className={style.links}>{data}</a>
               )
             }
-            <a className={style.greenLinks}>For NRNs</a>
+            <a href="" className={style.greenLinks}>For NRNs</a>
           </div>
 
           <div className={style.buttonDiv}>
