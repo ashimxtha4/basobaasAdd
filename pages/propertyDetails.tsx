@@ -4,17 +4,34 @@ import { HiOutlineInformationCircle } from "react-icons/hi"
 import Head from "next/head"
 import styles from '../styles/basicDetail.module.css'
 import Navbar from "../components/Navbar"
-// import { TbMinusVertical } from "react-icons/tb"
-// import {HiOutlineInformationCircle} from "react-icons/hi"
-// import {BiHome} from "react-icons/bi"
-// import Image from 'next/image'
-// import Image from "next/image"
-// import info from "../images/info.png"
+import AmenitiesCheckbox from '../components/ui components/customCheckbox'
 
 const propertyDetails: NextPage = () => {
-    const aminities=['Lawn','Drainage','Jacuzzi','Garage','Parking','Air Condition','Balcony','Deck','Fencing',
+    const amenities=['Lawn','Drainage','Jacuzzi','Garage','Parking','Air Condition','Balcony','Deck','Fencing',
             'Garden','CCTV','Gym','Microwave','Modular Kitchen','Swimming Pool','TV Cable','Electricity Backup',
-            'Intercom','Internet','Kids Playground','Lift','Maintainance','Security Staff','Store Room']
+            'Intercom','Internet','Kids Playground','Lift','Maintainance','Security Staff','Store Room','Amenities']
+    const handelSubmit=(e:Event)=>{
+        e.preventDefault();
+        var arr=document.getElementsByName("amenities");
+        var arrChecked:any=[]
+        var i:number;
+        for (i=0;i<arr.length;i++)
+        {
+            if (arr[i].checked)
+            {
+                arrChecked.push(arr[i].value)
+                document.getElementById("amenitiesError").style.visibility="hidden";
+                document.getElementById("amenitiesError").innerHTML="Must select atleast one amenities";
+            }
+        }
+        if (arrChecked.length<1)
+        {
+            document.getElementById("amenitiesError").innerHTML="Must select atleast one amenities";
+            document.getElementById("amenitiesError").style.visibility="visible";
+        }
+            
+        console.log(arrChecked)
+    }
     return (
         <>
             <Head>
@@ -274,38 +291,17 @@ const propertyDetails: NextPage = () => {
                 <div  className={style.property_details_components_aminities} >
                      <label className={style.label} htmlFor=""> Ameneties  <HiOutlineInformationCircle /></label>
                     <div className={style.aminities_button}>
-                        <input type="button" className={style.button} value='Lawn' />
-                        <input type="button" className={style.button} value='Drainage' />
-                        <input type="button" className={style.button} value='Jacuzzi' />
-                        <input type="button" className={style.button} value='Garage' />
-                        <input type="button" className={style.button} value='Parking' />
-                        <input type="button" className={style.button} value='Air Condition' />
-                        <input type="button" className={style.button} value='Balcony' />
-                        <input type="button" className={style.button} value='Deck' />
-                        <input type="button" className={style.button} value='Fencing' />
-                        <input type="button" className={style.button} value='Garden' />
-                        <input type="button" className={style.button} value='CCTV' />
-                        <input type="button" className={style.button} value='Gym' />
-                        <input type="button" className={style.button} value='Microwave' />
-                        <input type="button" className={style.button} value='Modular Kitchen' />
-                        <input type="button" className={style.button} value='Swimming Pool' />
-                        <input type="button" className={style.button} value='TV Cable' />
-                        <input type="button" className={style.button} value='Electricity Backup' />
-                        <input type="button" className={style.button} value='Intercom' />
-                        <input type="button" className={style.button} value='Internet' />
-                        <input type="button" className={style.button} value='Kids Playground' />
-                        <input type="button" className={style.button} value='Lift' />
-                        <input type="button" className={style.button} value='Maintainance' />
-                        <input type="button" className={style.button} value='Security Staff' />
-                        <input type="button" className={style.button} value='Store Room' />
+                        {/* <AminitiesCheckbox value="Aminities" /> */}
+                        {amenities.map((value)=><AmenitiesCheckbox value={value} />)}
                     </div>
+                    <span id="amenitiesError"></span>
                 </div>
             </div>
 
         </div>
 
         <div className={styles.footer}>
-            <button className={styles.next}>Next</button>
+            <button className={styles.next} onClick={handelSubmit}>Next</button>
         </div>
         </form>
                         
