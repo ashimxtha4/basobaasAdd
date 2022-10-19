@@ -11,7 +11,7 @@
 }
 
 .adDetailsTopic h1 {
-  font-family: "Product Sans";
+  font-family: 'Product Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -31,7 +31,7 @@
 .adDetailsTitle label,
 .adDetailsPrice label,
 .adDetailsFormDescription label {
-  font-family: "Product Sans";
+  font-family: 'Product Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -85,7 +85,7 @@
 .adDetailsUploads small {
   width: 345.5px;
   height: 24px;
-  font-family: "Product Sans";
+  font-family: 'Product Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;

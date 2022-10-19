@@ -2,12 +2,20 @@ import style from "../styles/Navbar.module.css"
 import Image from "next/image"
 import BasobasLogo from "../Images/BasobasLogo.svg"
 import type { NextPage } from "next";
-
+import Head from 'next/head'
 
 const Navbar:NextPage=()=> {
   const links:any = ["Buy","Rent","Home Loans","Blogs","Agencies","Unit Converter"];
   
   return (
+  <>
+    <Head>
+      {/* <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css" ></link> */}
+      <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet"></link>
+      <style>
+        @import url('http://fonts.cdnfonts.com/css/product-sans');
+      </style>
+      </Head>
     <div className={style.nav}>
         <div className={style.logo}>
             <span className={style.icon}><Image src={BasobasLogo} alt="no image"/></span>
@@ -39,6 +47,7 @@ const Navbar:NextPage=()=> {
           </div>
         </div>
     </div>
+    </>
   )
 }
 

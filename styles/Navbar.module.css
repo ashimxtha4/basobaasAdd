@@ -40,8 +40,6 @@
     /* position: absolute; */
     width: 320px;
     height: 40px;
-    /* left: 188px;
-    top: 15px; */
     background: #FFFFFF;
     border: 1px solid #CED4DA;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -59,54 +57,46 @@
     width: 770px;
     height: 70px;
     left: 581px;
-    top: 0px;
-    /* border: solid green; */
-}
+    top: 0px;}
 
 .linkDiv{
-    /* position: absolute; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    gap: 16px;
+    gap: 15px;
     width: 458px;
     height: 70px;
     flex: none;
-    /* order: 0; */
     flex-grow: 0;
-    /* border: solid 1px blue; */
-    /* left: 581px; */
 }
 
 .links{
     height: 70px;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 70px;
     text-transform: capitalize;
     color: #172B4D;
     flex: none;
     flex-grow: 0;
-    border: 0px;
     padding-right: 0;
 }
 
 .greenLinks{
-    width: 60px;
+    width: 62px;
     height: 70px;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 70px;
     text-transform: capitalize;
     color: #2DA449;
     flex: none;
     flex-grow: 0;
-    /* border: solid 1px blue; */
 }
 
 .buttonDiv{
@@ -119,9 +109,7 @@
     height: 40px;
     flex: none;
     order: 1;
-    flex-grow: 0;
-    /* border: solid red;   */
-}
+    flex-grow: 0;}
 
 .blueButton{
     display: flex;
@@ -143,10 +131,10 @@
 .blueButton p{
     width: 113px;
     height: 19px;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     display: flex;
     align-items: center;
@@ -191,10 +179,10 @@
 .name{
     width: 82px;
     height: 21px;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 21px;
     text-align: center;
     text-transform: capitalize;

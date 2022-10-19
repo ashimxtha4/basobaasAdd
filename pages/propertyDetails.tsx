@@ -5,6 +5,7 @@ import Head from "next/head"
 import styles from '../styles/basicDetail.module.css'
 import Navbar from "../components/Navbar"
 import AmenitiesCheckbox from '../components/ui components/customCheckbox'
+import Layout from '../components/layout'
 
 const propertyDetails: NextPage = () => {
     const amenities=['Lawn','Drainage','Jacuzzi','Garage','Parking','Air Condition','Balcony','Deck','Fencing',
@@ -34,44 +35,8 @@ const propertyDetails: NextPage = () => {
     }
     return (
         <>
-            <Head>
-                {/* <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css" ></link> */}
-                <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet"></link>
-                <style>
-                    {/* @import url('http://fonts.cdnfonts.com/css/product-sans'); */}
-                </style>
-            </Head>
-            <div className={styles.containerDiv}>
-            <div className={styles.nav}><Navbar /></div>
-            
-            <div className={styles.contentDiv}>
-
-                <div className={styles.sideProgress}>
-                    <div className={styles.topDiv}>Back to Dashboard</div>
-
-                    <div className={styles.midDiv}>
-                    <p className={styles.midDetails}>Basic Details</p>
-                    Mathi ko step haru
-                    </div>
-                </div>
-
-                <div className={styles.mainDiv}>
-                    <div className={styles.postProperty}>
-                    <p>Post Property For Free</p>
-                    </div>
-
-                    <div className={styles.mainBotDiv}>
-
-                    <div className={styles.botLeftDiv}>
-                        <div className={styles.topicDiv}>
-                        <h1>topic</h1>
-                        </div>
-                        
-                        <form className={styles.mainContentDiv}>
-
-                        <div className={styles.mainContentBody}>
-                            
-                        <div className={style.propertydetails_container}>
+        <Layout>
+            <div className={style.propertydetails_container}>
                 {/* <div className={style.propertydetails_section_top}>
                     <h4>Property Details</h4>
                 </div>
@@ -282,12 +247,6 @@ const propertyDetails: NextPage = () => {
                         </div>
                         </div>
                         </div>
-
-
-
-
-                {/* <input type="text" placeholder="Road Type" ></input> */}
-                
                 <div  className={style.property_details_components_aminities} >
                      <label className={style.label} htmlFor=""> Ameneties  <HiOutlineInformationCircle /></label>
                     <div className={style.aminities_button}>
@@ -296,28 +255,9 @@ const propertyDetails: NextPage = () => {
                     </div>
                     <span id="amenitiesError"></span>
                 </div>
-            </div>
-
-        </div>
-
-        <div className={styles.footer}>
-            <button className={styles.next} onClick={handelSubmit}>Next</button>
-        </div>
-        </form>
-                        
-                        
-        </div>
-        <div className={styles.botRightDiv}>information</div>
-        </div>
-                    
-        </div>
-        </div>
-                
-        
-        </div>
-            
-
-        </>
+        </div>     
+    </Layout>  
+    </>
     )
 }
 export default propertyDetails

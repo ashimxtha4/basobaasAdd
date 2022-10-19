@@ -7,11 +7,11 @@ import {BiHome} from "react-icons/bi"
 import Image from 'next/image'
 import commercial from "../Images/commercial.svg"
 import agriculture from "../Images/agriculture.svg"
-import Navbar from "../components/Navbar"
 import SmallRadio from '../components/ui components/radio/smallRadio'
 import RectangleRadio from '../components/ui components/radio/rectangleRadio'
 import SquareRadio from '../components/ui components/radio/squareRadio'
 import { boolean } from 'yup/lib/locale'
+import Layout from '../components/layout'
 
 const BasicDetail:NextPage =(e)=> {
 const [aCategory,setCategory]=useState(
@@ -69,15 +69,15 @@ const buttonClick=(e:Event)=>{
   console.log(arr1)
 }
   return (
-    <>
+  <>
     <Head>
       {/* <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css" ></link> */}
       <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet"></link>
       <style>
-        @import url('http://fonts.cdnfonts.com/css/product-sans');
+        {/* @import url('http://fonts.cdnfonts.com/css/product-sans'); */}
       </style>
       </Head>
-    <div className={style.containerDiv}>
+    {/* <div className={style.containerDiv}>
       <div className={style.nav}>
         <Navbar />
       </div>
@@ -106,7 +106,8 @@ const buttonClick=(e:Event)=>{
                 </div>
                 <form className={style.mainContentDiv} onSubmit={buttonClick}>
 
-                  <div className={style.mainContentBody}>
+                  <div className={style.mainContentBody}> */}
+                  <Layout onSubmit={buttonClick}>
                     <div className={style.adCategoryDiv}>
                       <p className={style.topic}>Ad Category <HiOutlineInformationCircle className={style.infoIcon} /></p>
                       <div className={style.radioDiv} >
@@ -144,7 +145,8 @@ const buttonClick=(e:Event)=>{
                       <span id='propertyCategoryError'></span>
                       </div>
                     </div>
-                  </div>
+                    </Layout>
+                  {/* </div>
 
                   <div className={style.footer}>
                     <button className={style.next} type="submit" >Next</button>
@@ -157,7 +159,7 @@ const buttonClick=(e:Event)=>{
             
           </div>
         </div> 
-    </div>
+    </div> */}
     </>
   )
 }
