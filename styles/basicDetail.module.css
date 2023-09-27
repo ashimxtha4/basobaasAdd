@@ -1,0 +1,300 @@
+
+.topic {
+    display: flex;
+    gap: 3px;
+    height: 24px;
+    font-family: 'Product Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+    flex-grow: 0;
+    margin: 0;
+}
+
+.infoIcon{
+    font-size: large;
+}
+
+.adCategoryDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;  
+}
+
+.radioDiv {
+    display: flex;
+    gap: 8px;
+    
+}
+
+.radioDivSpan{
+    width: fit-content;
+    display:flex;
+    gap:5px;
+    font-family: 'Product Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.customRadio {
+    display: flex;
+    position: relative;
+    border: 1px solid gray;
+    border-radius:50% ;
+    height: 15px;
+    width: 15px ;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Product Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333333;
+}
+
+.customRadio input:checked + .customRadio {
+    border: 0;
+}
+
+.radio {
+    align-self: center;
+    display: none;
+}
+
+.customRadio .checkmark {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opactity 1 ease;
+}
+
+.customRadio input:checked + .checkmark{
+    display: inline-block;
+    background-color: #3366FF;
+    opacity: 1;
+}
+
+.customRadio input:checked + .checkmark:after{
+    content: "";
+    background-color: white;
+    height: 48%;
+    width: 48%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.propertyTypeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 343px;
+    height: 140px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    /* border: solid 1px red; */
+}
+
+.propertyTypeDivRow{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 11px;
+    width: 344px;
+    height: 42px;
+    flex: none;
+    flex-grow: 0;
+    /* border: 1px solid ; */
+}
+
+.propertyTypeCard{
+    
+    width: 164px;
+    height: 42px;
+    border-radius: 5px;
+    flex: none;
+    /* flex-grow: 1; */
+    font-family: 'Product Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    color: #333333;
+}
+
+.propertyTypeCard div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #D8D8D8;
+    color: #333333;
+}
+
+.propertyTypeCard input:checked + div{
+    background: #0000FF;
+    color: white;
+}
+
+.propertyTypeCard input:checked + div Image{
+    color: white;
+}
+
+.propertyCategoryDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 344px;
+    height: 246px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    /* border: 1px solid brown; */
+}
+
+.propertyCategoryRow{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px;
+    gap: 12px;
+    width: 340px;
+    height: 58px;
+    flex: none;
+    flex-grow: 0;
+    /* border: solid 1px red; */
+}
+
+.propertyCategoryCard{
+    width: 105.33px;
+    height: 56px; 
+    border-radius: 5px;
+    
+}
+
+.propertyCategoryCard div{
+    box-sizing: border-box;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding-top: 5px;
+    flex: none;
+}
+
+.categoryRadio {
+    display: none;
+}
+
+.propertyCategoryCard input:checked + div{
+    background: #0000FF;
+    color: white;
+}
+
+.propertyCategoryCard input:checked + div p{
+    color: white;
+}
+
+.propertyCategoryCard span{
+    /* border: 1.5px solid #212121; */
+    margin: 0px;
+}
+
+
+.propertyCategoryCard p{
+    /* border: 1px solid; */
+    width: max-content;
+    height: 16px;
+    font-family: 'Product Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px;
+}
+
+
+
+
+@media only screen and (min-width: 1024px){
+
+    .topic{
+        width: fit-content;
+        height: 24px;
+        font-family: 'Product Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #333333;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .propertyTypeDiv{
+        /* border: solid 1px; */
+        width: 100%;
+        height: max-content;
+    }
+
+    .propertyTypeDivRow{
+        /* border: 1px solid ; */
+        width: 100%;
+        height: max-content;
+    }
+
+    .propertyCategoryDiv{
+        /* border: solid 1px; */
+        width: 100%;
+        height: max-content;
+    }
+
+    .propertyCategoryRow{
+        /* border: solid 1px; */
+        width: 100%;
+        flex-wrap:wrap ;
+    }
+}
+

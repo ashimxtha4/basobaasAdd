@@ -1,0 +1,151 @@
+.adDetailsMainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  position: relative;
+  width: 345.5px;
+  height: 640px;
+  background: #ffffff;
+  /* border: solid 1px; */
+}
+
+.adDetailsTopic h1 {
+  font-family: 'Product Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #444444;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  justify-content: center;
+}
+
+.adDetailsUploads label,
+.adDetailsYoutube label,
+.adDetailsTitle label,
+.adDetailsPrice label,
+.adDetailsFormDescription label {
+  font-family: 'Product Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.adDetailsLine {
+  display: none;
+}
+
+.flexTwo{
+  /* border: solid 1px; */
+  display: flex;
+  flex-direction: column;
+  height:fit-content ;
+  gap: 16px;
+}
+
+
+.adDetailsUploads label {
+  color: #333333;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.adDetailsFormDescription textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 345px;
+  height: 120px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.adDetailsUploads small {
+  width: 345.5px;
+  height: 24px;
+  font-family: 'Product Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #969696;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.textArea{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ced4da;
+  padding: 0px;
+  gap: 8px;
+  width: 345px;
+  height: 120px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+
+
+@media only screen and (min-width: 1024px){
+
+  .adDetailsMainWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 705px;
+    height:821px;
+    gap: 40px;
+    /* border: 2px solid; */
+  }
+
+  .flexTwo{
+    /* border: solid 1px; */
+    display: flex;
+    flex-direction: row;
+    height:fit-content ;
+    gap: 16px;
+  }
+
+  .textArea{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ced4da;
+    padding: 0px;
+    gap: 8px;
+    width: 705px;
+    height: 123px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}
